@@ -147,14 +147,19 @@ hr {
 # --------------------------------------------------
 
 @st.cache_data
-def load_data():
 
-    file_path = Path("data/cleaned_supply_chain.csv")
+def load_data(uploaded_file=None):
 
-    if not file_path.exists():
-        return None
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
 
-    df = pd.read_csv(file_path)
+    else:
+        file_path = Path("data/cleaned_supply_chain.csv")
+
+        if not file_path.exists():
+            return None
+
+        df = pd.read_csv(file_path)
 
     df["order date (DateOrders)"] = pd.to_datetime(
         df["order date (DateOrders)"],
@@ -168,15 +173,22 @@ def load_data():
     return df
 
 
-df = load_data()
+# Dataset upload option
+uploaded_file = st.sidebar.file_uploader(
+    "Upload Supply Chain Dataset",
+    type=["csv"]
+)
+
+df = load_data(uploaded_file)
 
 if df is None:
-    st.error("Cleaned dataset not found. Check data/cleaned_supply_chain.csv")
+    st.info("Please upload your cleaned_supply_chain.csv file using the sidebar.")
     st.stop()
 
 if df.empty:
     st.error("Your cleaned dataset is empty.")
     st.stop()
+
 
 
 # --------------------------------------------------
