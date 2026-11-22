@@ -1,0 +1,24 @@
+Order Region,Total_Order_Items,Average_Delay,Total_Sales
+Canada,959,0.39,186861.04
+Caribbean,8318,0.55,1651019.33
+Central Africa,1677,0.64,327263.02
+Central America,28341,0.56,5665712.1
+Central Asia,553,0.65,109839.93
+East Africa,1852,0.57,376234.9
+East of USA,6915,0.58,1371111.99
+Eastern Asia,7280,0.57,1486401.34
+Eastern Europe,3920,0.58,774266.57
+North Africa,3232,0.55,634752.22
+Northern Europe,9792,0.55,2155830.65
+Oceania,10148,0.56,2016654.2
+South America,14935,0.56,2960881.41
+South Asia,7731,0.6,1553680.92
+South of  USA ,4045,0.58,785783.95
+Southeast Asia,9539,0.56,1932495.57
+Southern Africa,1157,0.48,228251.59
+Southern Europe,9431,0.52,2047918.82
+US Center ,5887,0.59,1151355.77
+West Africa,3696,0.55,727951.19
+West Asia,6009,0.57,1174671.78
+West of USA ,7993,0.56,1571415.96
+Western Europe,27109,0.6,5894380.77
